@@ -1,0 +1,99 @@
+{
+  "title": "Jarand Autentisering",
+  "global": {
+    "loading": "Laster inn..."
+  },
+  "home": {
+    "logged-in-as": "Logget inn som"
+  },
+  "login": {
+    "title": "Logg inn",
+    "email": "E-post",
+    "password": "Passord",
+    "login": "Logg inn",
+    "register-user": "Registrer bruker",
+    "two-factor-desc": "Oppgi en kode fra autentiseringsappen på din telefon",
+    "code": "Kode",
+    "verify-code": "Verifiser kode"
+  },
+  "register": {
+    "title": "Registrer bruker",
+    "email": "E-post",
+    "password": "Passord",
+    "confirm-password": "Bekreft passord",
+    "register": "Registrer",
+    "login": "Logg inn",
+    "download-title": "Last ned autentiseringsapp",
+    "download-desc": "Før du kan fullføre registrering må du sette opp en autentiseringsapp for å generere innloggingskoder. Appen Google Autentisering er anbefalt, men alle apper basert på TOTP (Tidsbasert engangspassord) fungerer.",
+    "qr-title": "Skann QR-koden",
+    "qr-desc": "Bruk autentiseringsappen fra forrige steg for å skanne QR-koden under:",
+    "qr-image-alt": "QR-kode",
+    "secret-prefix": "Du kan også oppgi denne koden",
+    "secret-suffix": "manuelt i appen.",
+    "verify-title": "Verifiser oppsett",
+    "verify-desc": "Siste steg er å oppgi en kode generert av appen for å verifisere at alt er riktig satt opp.",
+    "code": "Kode",
+    "verify-code": "Verifiser kode"
+  },
+  "apps": {
+    "title": "Autoriserte apper",
+    "authorized": "Autorisert"
+  },
+  "new-app": {
+    "title": "Koble til ny app",
+    "desc": "Ved å koble til en app tillater du den appen å operere på dine vegne, begrenset til tilgangene under. Du kan fjerne denne tilgangen når som helst.",
+    "permission": "Tilgang",
+    "authorize": "Autoriser",
+    "cancel": "Avbryt"
+  },
+  "oauth-error": {
+    "title": "Noe gikk galt",
+    "invalid-client-id": "Appen finnes ikke",
+    "invalid-fields": "Forespørselen inneholder ugyldig data",
+    "missing-claims": "Serveren klarte ikke å verifisere innloggingsstatus",
+    "unknown-client": "Appen finnes ikke",
+    "unexpected-redirect-uri": "Uventet omdirigeringslenke",
+    "unknown-scope": "Forespurt tilgang finnes ikke",
+    "invalid-scope": "Den innloggede brukeren har ikke lov til å få denne tilgangen"
+  },
+  "auth-api": {
+    "login": {
+      "factor-one": {
+        "missing-email": "E-postadresse er påkrevd",
+        "missing-password": "Passord er påkrevd",
+        "invalid-email": "E-postadresse er ugyldig",
+        "invalid-password": "Passord er ugyldig",
+        "wrong-credentials": "Ugyldig brukernavn og/eller passord"
+      },
+      "factor-two": {
+        "missing-code": "Kode er påkrevd",
+        "invalid-code": "Kode er ugyldig",
+        "parse-failed": "Feilet ved lesing av nøkkel",
+        "missing-token": "Nøkkel er påkrevd",
+        "invalid-level": "Nøkkel er ugyldig",
+        "no-user": "Nøkkel er ugyldig",
+        "wrong-code": "Kode er feil"
+      }
+    },
+    "register": {
+      "totp-setup": {
+        "missing-code": "Kode er påkrevd",
+        "invalid-code": "Kode er ugyldig",
+        "parse-failed": "Feilet ved lesing av nøkkel",
+        "missing-token": "Nøkkel er påkrevd",
+        "invalid-level": "Nøkkel er ugyldig",
+        "no-user": "Nøkkel er ugyldig",
+        "wrong-code": "Kode er feil",
+        "already-setup": "Tofaktor-autentisering er allerede satt opp"
+      },
+      "missing-email": "E-postadresse er påkrevd",
+      "invalid-email": "E-postadresse er ugyldig",
+      "missing-password": "Passord er påkrevd",
+      "invalid-password": "Passord er ugyldig, 8 eller flere tegn er påkrevd",
+      "missing-confirmed-password": "Bekreftet passord er påkrevd",
+      "invalid-confirmed-password": "Bekreftet passord er ugyldig, 8 eller flere tegn er påkrevd",
+      "password-mismatch": "Bekreftet passord er ikke likt som passord",
+      "email-in-use": "E-postadressen er allerede registrert"
+    }
+  }
+}
