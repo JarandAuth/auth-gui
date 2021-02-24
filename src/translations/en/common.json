@@ -4,7 +4,21 @@
     "loading": "Loading..."
   },
   "home": {
-    "logged-in-as": "Logged in as",
+    "welcome-prefix": "Welcome, ",
+    "logged-in": "You are logged now logged in. With this account, you have the following permissions:",
+    "scope": {
+      "archive-api": {
+        "archive": {
+          "write": "Write access to the archive service"
+        }
+      },
+      "auth-api": {
+        "user": {
+          "write": "Write access to users in the authentication service"
+        }
+      },
+      "unknown": "Unknown scope"
+    },
     "logout": "Logout"
   },
   "login": {

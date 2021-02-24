@@ -1,29 +1,21 @@
 import React, {useEffect, useState} from "react";
-import {checkTokenData} from "../../services/tokenDataService";
 import {useHistory} from "react-router-dom";
 import {useTranslation} from "react-i18next";
-import {Button, Grid, Typography} from "@material-ui/core";
-import {makeStyles} from "@material-ui/core/styles";
+import {Button, Card, CardActions, CardContent, Container, List, ListItem, ListItemText, Typography} from "@material-ui/core";
 import {logout} from "../../services/logoutService";
-
-const useStyles = makeStyles(() => ({
-    center: {
-        textAlign: "center"
-    }
-}));
+import {checkTokenData} from "../../services/tokenDataService";
 
 function Home() {
     const history = useHistory();
     const {t} = useTranslation("common");
-    const classes = useStyles();
 
     const [isLoading, setLoading] = useState(true);
-    const [email, setEmail] = useState();
+    const [data, setData] = useState();
 
     useEffect(() => {
         checkTokenData().then(response => {
             if (response.email) {
-                setEmail(response.email);
+                setData(response);
                 setLoading(false);
             } else {
                 history.push("/login");
@@ -38,14 +30,24 @@ function Home() {
     };
 
     if (!isLoading) {
-        return <Grid container spacing={3}>
-            <Grid item xs={12} className={classes.center}>
-                <Typography variant="h5">{t("home.logged-in-as")} <b>{email}</b></Typography>
-            </Grid>
-            <Grid item xs={12} className={classes.center}>
-                <Button variant="contained" color="secondary" onClick={handleLogout}>{t("home.logout")}</Button>
-            </Grid>
-        </Grid>;
+        return <Container maxWidth="sm">
+            <Card variant="outlined">
+                <CardContent>
+                    <Typography variant="h5" component="h2">{t("home.welcome-prefix")} <b>{data.email}</b></Typography>
+                </CardContent>
+                <CardContent>
+                    <Typography variant="body1" component="p">{t("home.logged-in")}</Typography>
+                </CardContent>
+                <CardContent>
+                    <List>
+                        {data.scopes.map(scope => <ListItem key={scope}><ListItemText primary={scope} secondary={t([`home.scope.${scope}`, "home.scope.unknown"])}/></ListItem>)}
+                    </List>
+                </CardContent>
+                <CardActions>
+                    <Button variant="outlined" color="secondary" onClick={handleLogout}>{t("home.logout")}</Button>
+                </CardActions>
+            </Card>
+        </Container>;
     } else {
         return <Typography variant="h6" align="center">{t("global.loading")}</Typography>;
     }

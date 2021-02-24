@@ -4,7 +4,21 @@
     "loading": "Laster inn..."
   },
   "home": {
-    "logged-in-as": "Logget inn som",
+    "welcome-prefix": "Velkommen, ",
+    "logged-in": "Du er nå logget inn. Med denne kontoen har du følgende tilganger:",
+    "scope": {
+      "archive-api": {
+        "archive": {
+          "write": "Skrivetilgang til arkivtjenesten"
+        }
+      },
+      "auth-api": {
+        "user": {
+          "write": "Skrivetilgang til brukere i autentiseringstjenesten"
+        }
+      },
+      "unknown": "Ukjent tilgang"
+    },
     "logout": "Logg ut"
   },
   "login": {
