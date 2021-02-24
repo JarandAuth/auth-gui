@@ -4,7 +4,8 @@
     "loading": "Loading..."
   },
   "home": {
-    "logged-in-as": "Logged in as"
+    "logged-in-as": "Logged in as",
+    "logout": "Logout"
   },
   "login": {
     "title": "Login",

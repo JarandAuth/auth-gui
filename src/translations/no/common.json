@@ -4,7 +4,8 @@
     "loading": "Laster inn..."
   },
   "home": {
-    "logged-in-as": "Logget inn som"
+    "logged-in-as": "Logget inn som",
+    "logout": "Logg ut"
   },
   "login": {
     "title": "Logg inn",
